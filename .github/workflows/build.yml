@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*" # Triggers on tags like v1.0, v2.1, etc.
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore Dependencies
+      run: dotnet restore src/Soundeck.csproj
+
+    - name: Build and Publish
+      # We publish to a specific folder to zip it cleanly
+      run: >
+        dotnet publish src/Soundeck.csproj 
+        -c Release 
+        -r win-x64 
+        --self-contained true 
+        -p:PublishReadyToRun=true 
+        -p:WindowsAppSDKSelfContained=true 
+        -p:WindowsPackageType=None 
+        -o ./publish
+
+    - name: Create Release Zip
+      run: Compress-Archive -Path ./publish/* -DestinationPath Soundeck-win-x64-${{ github.ref_name }}.zip
+
+    - name: Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: Soundeck-win-x64-${{ github.ref_name }}.zip
+        generate_release_notes: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
