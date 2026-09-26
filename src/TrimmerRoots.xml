@@ -1,0 +1,8 @@
+<linker>
+  <assembly fullname="SoundeckPro" preserve="all" />
+  <assembly fullname="Microsoft.UI.Xaml" preserve="all" />
+  <assembly fullname="Microsoft.WindowsAppRuntime.Bootstrap" preserve="all" />
+  <assembly fullname="NAudio" preserve="all" />
+  <assembly fullname="NAudio.Wasapi" preserve="all" />
+  <assembly fullname="Newtonsoft.Json" preserve="all" />
+</linker>

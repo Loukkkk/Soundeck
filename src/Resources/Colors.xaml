@@ -1,0 +1,93 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- ── Background layers ──────────────────────────────────────── -->
+    <Color x:Key="AppBgColor">#0F0F19</Color>
+    <Color x:Key="SurfaceColor">#181828</Color>
+    <Color x:Key="CardColor">#1E1E32</Color>
+    <Color x:Key="CardHoverColor">#252540</Color>
+    <Color x:Key="BorderColor">#2A2A45</Color>
+    <Color x:Key="SidebarColor">#141422</Color>
+
+    <!-- ── Accent palette ─────────────────────────────────────────── -->
+    <Color x:Key="AccentColor">#6C72F5</Color>
+    <Color x:Key="Accent2Color">#A855F7</Color>
+    <Color x:Key="AccentDimColor">#3A3D8A</Color>
+    <Color x:Key="SuccessColor">#22C55E</Color>
+    <Color x:Key="WarningColor">#F59E0B</Color>
+    <Color x:Key="DangerColor">#EF4444</Color>
+    <Color x:Key="PlayingColor">#22C55E</Color>
+
+    <!-- ── Text ───────────────────────────────────────────────────── -->
+    <Color x:Key="TextPrimaryColor">#E8E8F8</Color>
+    <Color x:Key="TextSecondaryColor">#9090B0</Color>
+    <Color x:Key="TextDimColor">#606080</Color>
+
+    <!-- ── SolidColorBrushes ──────────────────────────────────────── -->
+    <SolidColorBrush x:Key="AppBgBrush"         Color="{StaticResource AppBgColor}" />
+    <SolidColorBrush x:Key="SurfaceBrush"        Color="{StaticResource SurfaceColor}" />
+    <SolidColorBrush x:Key="CardBrush"           Color="{StaticResource CardColor}" />
+    <SolidColorBrush x:Key="CardHoverBrush"      Color="{StaticResource CardHoverColor}" />
+    <SolidColorBrush x:Key="BorderBrush"         Color="{StaticResource BorderColor}" />
+    <SolidColorBrush x:Key="SidebarBrush"        Color="{StaticResource SidebarColor}" />
+    <SolidColorBrush x:Key="AccentBrush"         Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="Accent2Brush"        Color="{StaticResource Accent2Color}" />
+    <SolidColorBrush x:Key="AccentDimBrush"      Color="{StaticResource AccentDimColor}" />
+    <SolidColorBrush x:Key="SuccessBrush"        Color="{StaticResource SuccessColor}" />
+    <SolidColorBrush x:Key="WarningBrush"        Color="{StaticResource WarningColor}" />
+    <SolidColorBrush x:Key="DangerBrush"         Color="{StaticResource DangerColor}" />
+    <SolidColorBrush x:Key="PlayingBrush"        Color="{StaticResource PlayingColor}" />
+    <SolidColorBrush x:Key="TextPrimaryBrush"    Color="{StaticResource TextPrimaryColor}" />
+    <SolidColorBrush x:Key="TextSecondaryBrush"  Color="{StaticResource TextSecondaryColor}" />
+    <SolidColorBrush x:Key="TextDimBrush"        Color="{StaticResource TextDimColor}" />
+
+    <!-- ── ContentDialog theme overrides (popups match app dark theme) ──── -->
+    <SolidColorBrush x:Key="ContentDialogBackground"            Color="#1E1E32" />
+    <SolidColorBrush x:Key="ContentDialogForeground"             Color="#E8E8F8" />
+    <SolidColorBrush x:Key="ContentDialogBorderBrush"            Color="#2A2A45" />
+    <SolidColorBrush x:Key="ContentDialogSmokeFill"              Color="#99000000" />
+    <SolidColorBrush x:Key="ContentDialogButtonBackground"       Color="#2A2A45" />
+    <SolidColorBrush x:Key="ContentDialogButtonForeground"       Color="#E8E8F8" />
+    <SolidColorBrush x:Key="ContentDialogButtonBorderBrush"      Color="#2A2A45" />
+    <SolidColorBrush x:Key="ButtonBackground"                    Color="#1E1E32" />
+    <SolidColorBrush x:Key="ButtonBackgroundPointerOver"         Color="#252540" />
+    <SolidColorBrush x:Key="ButtonBackgroundPressed"             Color="#3A3D8A" />
+    <SolidColorBrush x:Key="ButtonForeground"                    Color="#E8E8F8" />
+    <SolidColorBrush x:Key="ButtonForegroundPointerOver"         Color="#E8E8F8" />
+    <SolidColorBrush x:Key="ButtonForegroundPressed"             Color="#E8E8F8" />
+    <SolidColorBrush x:Key="ButtonBorderBrush"                   Color="#2A2A45" />
+    <SolidColorBrush x:Key="AccentButtonBackground"              Color="#6C72F5" />
+    <SolidColorBrush x:Key="AccentButtonForeground"               Color="White" />
+    <SolidColorBrush x:Key="AccentButtonBackgroundPointerOver"   Color="#7D82F7" />
+    <SolidColorBrush x:Key="AccentButtonBackgroundPressed"       Color="#5A60D0" />
+
+    <!-- TextBox / ComboBox / MenuFlyout dark theme overrides (popups & flyouts) -->
+    <SolidColorBrush x:Key="TextControlBackground"               Color="#1E1E32" />
+    <SolidColorBrush x:Key="TextControlBackgroundPointerOver"    Color="#252540" />
+    <SolidColorBrush x:Key="TextControlBackgroundFocused"        Color="#1E1E32" />
+    <SolidColorBrush x:Key="TextControlForeground"               Color="#E8E8F8" />
+    <SolidColorBrush x:Key="TextControlForegroundPointerOver"    Color="#E8E8F8" />
+    <SolidColorBrush x:Key="TextControlForegroundFocused"        Color="#E8E8F8" />
+    <SolidColorBrush x:Key="TextControlBorderBrush"               Color="#2A2A45" />
+    <SolidColorBrush x:Key="TextControlBorderBrushPointerOver"   Color="#6C72F5" />
+    <SolidColorBrush x:Key="TextControlBorderBrushFocused"        Color="#6C72F5" />
+    <SolidColorBrush x:Key="TextControlPlaceholderForeground"     Color="#606080" />
+
+    <SolidColorBrush x:Key="ComboBoxBackground"                  Color="#1E1E32" />
+    <SolidColorBrush x:Key="ComboBoxBackgroundPointerOver"       Color="#252540" />
+    <SolidColorBrush x:Key="ComboBoxForeground"                  Color="#E8E8F8" />
+    <SolidColorBrush x:Key="ComboBoxBorderBrush"                  Color="#2A2A45" />
+    <SolidColorBrush x:Key="ComboBoxDropDownBackground"           Color="#1E1E32" />
+    <SolidColorBrush x:Key="ComboBoxItemBackground"                Color="#1E1E32" />
+    <SolidColorBrush x:Key="ComboBoxItemBackgroundPointerOver"   Color="#252540" />
+    <SolidColorBrush x:Key="ComboBoxItemBackgroundSelected"      Color="#3A3D8A" />
+    <SolidColorBrush x:Key="ComboBoxItemForeground"                Color="#E8E8F8" />
+
+    <SolidColorBrush x:Key="MenuFlyoutPresenterBackground"        Color="#1E1E32" />
+    <SolidColorBrush x:Key="MenuFlyoutItemBackgroundPointerOver" Color="#252540" />
+    <SolidColorBrush x:Key="MenuFlyoutItemForeground"             Color="#E8E8F8" />
+    <SolidColorBrush x:Key="MenuFlyoutSubItemBackground"          Color="#1E1E32" />
+    <SolidColorBrush x:Key="FlyoutPresenterBackground"             Color="#1E1E32" />
+
+</ResourceDictionary>
